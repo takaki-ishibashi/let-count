@@ -5,13 +5,16 @@ import './App.css';
 class App extends Component {
 
   countWordNum() {
-    const rawWords = document.getElementById('input-words').value;
+    const rawValue = document.getElementById('input-words').value;
     const wordsSpaceNumElm = document.getElementById('word-space-num');
     const wordsNumElm = document.getElementById('word-num');
     const lineNumElm = document.getElementById('line-num');
-    wordsSpaceNumElm.innerText = rawWords.length;
-    wordsNumElm.innerText = rawWords.replace(' ', '').replace('　', '').length;
-    lineNumElm.innerText = rawWords.match(/[^\r\n]*(\r\n|\r|\n|$)/g).length - 1;
+    const adjustedValue = rawValue.replace(/[\r\n]/g,'');
+    if (rawValue) {
+      wordsSpaceNumElm.innerText = adjustedValue.length;
+      wordsNumElm.innerText = adjustedValue.replace(' ', '').replace('　', '').length;
+      lineNumElm.innerText = rawValue.match(/[^\r\n]*(\r\n|\r|\n|$)/g).length - 1;  
+    }
   }
 
   resetInput() {
