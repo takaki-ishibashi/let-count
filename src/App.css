@@ -18,6 +18,10 @@
   font-size: large;
 }
 
+.b-0 {
+  bottom: 0;
+}
+
 .h-x {
  height: 250px;
 }
@@ -30,21 +34,19 @@
   margin-right: 3px;
 }
 
-.px-5 {
-  padding-left: 5px;
-  padding-right: 5px;
+.m-100 {
+  margin: 100px;
 }
 
-.py-2 {
-  padding-top: 2px;
-  padding-bottom: 2px;
+.p-a {
+  position: absolute;
 }
 
 .w-mx-x {
   max-width: 800px;
 }
 
-.w-mx-400 {
+.w-mx-380 {
   max-width: 380px;
 }
 
@@ -52,8 +54,8 @@
   width: 100%;
 }
 
-.w-180 {
-  width: 180px;
+.w-40p {
+  width: 40%;
 }
 
 @keyframes App-logo-spin {
